@@ -25,12 +25,10 @@ type MultipleChoiceProps = {
 };
 
 export const MultipleChoice = ({ title, properties }: MultipleChoiceProps) => {
-  const [option, setOption] = useState(false);
+  const [option, setOption] = useState<string | null>(null);
 
-  const handleButtonSelect = (selected?: string) => {
-    if (selected) {
-      setOption(true);
-    }
+  const handleButtonSelect = (selected: string) => {
+    setOption(selected);
     console.log("option: ", selected);
   };
 
@@ -41,7 +39,7 @@ export const MultipleChoice = ({ title, properties }: MultipleChoiceProps) => {
       {properties.choices.map((choice, i) => {
         return (
           <button
-            disabled={option}
+            disabled={!!option}
             className="choices"
             key={i}
             onClick={() => handleButtonSelect(choice.label)}

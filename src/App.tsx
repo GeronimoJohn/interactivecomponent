@@ -1,5 +1,5 @@
 import React from "react";
-import { MultipleChoice } from "./components/multiplechoiceSA";
+import { MultipleChoice } from "./components/multiplechoice";
 import data from "./data/data";
 import "./App.css";
 
