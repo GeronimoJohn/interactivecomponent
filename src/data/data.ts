@@ -7,6 +7,10 @@ const data = {
         required: false,
     },
     properties: {
+        randomize: false,
+        allow_multiple_selection: false,
+        allow_other_choice: false,
+        vertical_alignment: true,
         choices: [
             {
                 ref: "16SDF6FJ28F8AJ17F7QJ19GJ",
